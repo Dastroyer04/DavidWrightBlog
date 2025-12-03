@@ -1,52 +1,8 @@
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    padding: 0;
     background-color: #f5f5f5;
     color: #333;
-}
-
-.navigation {
-    background-color: #0073e6;
-    color: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navigation nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo img {
-    width: 150px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
 }
 
 .hero {
@@ -56,14 +12,8 @@ body {
     padding: 100px 20px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 24px;
-}
+.hero h1 { font-size: 48px; margin: 0; }
+.hero p { font-size: 24px; }
 
 .container {
     max-width: 1200px;
@@ -71,96 +21,62 @@ body {
     padding: 0 20px;
 }
 
-
-.programs h2, .contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 36px;
+.about-me {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.program-card {
+.about-container { display: flex; gap: 20px; align-items: center; }
+.about-photo {
+  width: 250px;
+  max-width: 180px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.experience-card {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.program-card h3 {
-    margin-top: 0;
-}
-
-.contact form {
+.experience-card.image-left {
     display: flex;
-    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.contact label {
-    margin: 10px 0 5px;
+.experience-img {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
-.contact input, .contact textarea, .contact select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
+.img1 { background-image: url('images/ssb.png'); }
+.img2 { background-image: url('images/smcs.jpg'); }
+.img3 { background-image: url('images/wpt.png'); }
+.img4 { background-image: url('images/bgc.png'); }
 
-.contact button {
-    padding: 10px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+.experience-text { flex: 1; }
 
-.contact button:hover {
-    background-color: #005bb5;
-}
 
 .contact p {
-    text-align: center;
     font-size: 18px;
 }
 
-.contact span {
-    font-weight: bold;
-}
 
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .navigation nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .program-card, .about, .contact form {
-        padding: 10px;
-    }
-
-    .container {
-        margin: 20px auto;
-    }
+    .experience-card.image-left { flex-direction: column; text-align: center; }
+    .experience-img { width: 150px; height: 150px; margin: auto; }
 }
